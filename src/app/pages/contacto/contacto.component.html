@@ -1,24 +1,74 @@
 <!-- BANNER -->
 
 <div class="w-full mb-16">
-  <img
-    src="assets/Contacto.png"
-    alt="Banner"
-    class="w-full rounded-3xl shadow-xl object-cover"
-  >
+
+<img
+src="assets/Contacto.png"
+alt="Banner"
+class="w-full rounded-3xl shadow-xl object-cover"
+
+>
+
 </div>
 
 <div class="max-w-md mx-auto mt-10">
-  <h2 class="text-2xl font-bold mb-4">Contáctanos</h2>
 
-  <form class="space-y-4">
-    <input type="text" placeholder="Nombre Completo" class="w-full border p-2 rounded">
-    <input type="email" placeholder="Correo" class="w-full border p-2 rounded">
-    <input type="text" placeholder="Celular" class="w-full border p-2 rounded">
-    <textarea placeholder="Mensaje" class="w-full border p-2 rounded"></textarea>
+  <h2 class="text-2xl font-bold mb-4">
+    Contáctanos
+  </h2>
 
-    <button class="bg-blue-600 text-white px-4 py-2 rounded">
-      Enviar
-    </button>
+  <form class="space-y-4" (ngSubmit)="enviarContacto()">
+
+
+<input
+  type="text"
+  name="nombre"
+  [(ngModel)]="contacto.nombre"
+  placeholder="Nombre Completo"
+  class="w-full border p-2 rounded"
+  required
+>
+
+<input
+  type="email"
+  name="correo"
+  [(ngModel)]="contacto.correo"
+  placeholder="Correo"
+  class="w-full border p-2 rounded"
+  required
+>
+
+<input
+  type="text"
+  name="telefono"
+  [(ngModel)]="contacto.telefono"
+  placeholder="Celular"
+  class="w-full border p-2 rounded"
+  required
+>
+
+<textarea
+  name="mensaje"
+  [(ngModel)]="contacto.mensaje"
+  placeholder="Mensaje"
+  class="w-full border p-2 rounded"
+  required
+></textarea>
+
+<button
+  type="submit"
+  class="bg-blue-600 text-white px-4 py-2 rounded"
+>
+  Enviar
+</button>
+
+@if (mensajeExito) {
+  <div class="mt-4 text-green-600 font-semibold text-center">
+    {{ mensajeExito }}
+  </div>
+}
+
+
   </form>
+
 </div>

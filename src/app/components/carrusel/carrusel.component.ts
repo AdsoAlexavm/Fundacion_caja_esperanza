@@ -11,7 +11,7 @@ export class CarruselComponent {
 
 
   imagenes = [
-    'assets/carrusel1.png',
+    'assets/carrusel1.jpg',
     'assets/carrusel2.png',
     'assets/carrusel3.png'
   ];
