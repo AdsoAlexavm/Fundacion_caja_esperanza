@@ -1,0 +1,10 @@
+{
+  "routes": {
+    "/": {},
+    "/contacto": {},
+    "/history": {},
+    "/programs": {},
+    "/quiero-saber-mas": {},
+    "/voluntariado": {}
+  }
+}
