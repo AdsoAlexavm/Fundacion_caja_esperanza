@@ -2,43 +2,51 @@
 
   <div class="max-w-6xl mx-auto px-6">
 
-    <h2 
+    <h2
       class="text-4xl font-bold text-green-800 text-center mb-10">
       Momentos que generan esperanza ❤️
     </h2>
 
+    <!-- CARRUSEL -->
+    <div class="max-w-5xl mx-auto">
+      
+        <div class="relative overflow-hidden rounded-3xl shadow-xl">
 
-    <div class="relative overflow-hidden rounded-3xl shadow-xl">
-
-      <img
-        [src]="imagenes[indiceActual]"
-        alt="Actividades Fundación Caja de Esperanza"
-        class="w-full h-[450px] object-cover transition duration-700"
-      >
-
-
-      <!-- Botón anterior -->
-
-      <button
-        (click)="anterior()"
-        class="absolute left-4 top-1/2 -translate-y-1/2 bg-white/80 rounded-full px-4 py-2 text-green-700 shadow"
-      >
-        ❮
-      </button>
+        <img
+          [src]="imagenes[indiceActual]"
+          alt="Actividades Fundación Caja de Esperanza"
+          class="w-full h-[250px] md:h-[380px] object-contain transition duration-700"
+        >
 
 
-      <!-- Botón siguiente -->
+        <!-- Botón anterior -->
+        <button
+          (click)="anterior()"
+          class="absolute left-4 top-1/2 -translate-y-1/2
+                 bg-white/80 hover:bg-white
+                 rounded-full px-4 py-2
+                 text-green-700 shadow
+                 transition"
+        >
+          ❮
+        </button>
 
-      <button
-        (click)="siguiente()"
-        class="absolute right-4 top-1/2 -translate-y-1/2 bg-white/80 rounded-full px-4 py-2 text-green-700 shadow"
-      >
-        ❯
-      </button>
 
+        <!-- Botón siguiente -->
+        <button
+          (click)="siguiente()"
+          class="absolute right-4 top-1/2 -translate-y-1/2
+                 bg-white/80 hover:bg-white
+                 rounded-full px-4 py-2
+                 text-green-700 shadow
+                 transition"
+        >
+          ❯
+        </button>
+
+      </div>
 
     </div>
-
 
   </div>
 
